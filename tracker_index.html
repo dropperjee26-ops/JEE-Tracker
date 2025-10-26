@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JEE Advanced Drop Year Tracker</title>
+    <link rel="stylesheet" href="tracker_style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <h1>JEE Advanced Deadline: Dec 15, 2025 (50 Days Left)</h1>
+    
+    <h2>Overall Progress: <span id="progress-text">0%</span></h2>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Subject</th>
+                <th>Module Block</th>
+                <th>Lectures/PYQs</th>
+                <th>Target Date</th>
+            </tr>
+        </thead>
+        <tbody id="task-list">
+            </tbody>
+    </table>
+    
+    <p class="commitment">Commitment: 4 Lectures + 2.5 Hrs PYQs Daily (M-S)</p>
+</div>
+
+<script src="tracker_script.js"></script>
+
+</body>
+</html>
