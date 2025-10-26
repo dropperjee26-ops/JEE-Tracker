@@ -3,11 +3,42 @@
 <head>
     <title>JEE Advanced Drop Year Tracker</title>
     <link rel="stylesheet" href="tracker_style.css">
+    <script src="tracker_script.js"></script>
+    <style>
+        /* This is the quick CSS needed for the dark theme. The main styling is in tracker_style.css */
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #1e1e1e; 
+            color: #ffffff; 
+            padding: 20px; 
+        }
+        .dashboard { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background-color: #252526; 
+            padding: 20px; 
+            border-radius: 8px; 
+        }
+        h1 { 
+            color: #50fa7b; 
+            border-bottom: 2px solid #50fa7b; 
+            padding-bottom: 10px; 
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #3e3e3e; }
+        th { background-color: #3e3e3e; color: #ffffff; }
+        .completed { text-decoration: line-through; color: #999999; }
+        .day-header { background-color: #3b3b3b; color: #ffb86c; font-size: 1.2em; }
+        .commitment { margin-top: 20px; font-size: 1.1em; color: #ffb86c; }
+        /* Progress Bar styling from tracker_style.css is also needed */
+        .progress-bar-container { height: 20px; background-color: #3e3e3e; border-radius: 5px; margin-top: 10px; }
+        .progress-bar { height: 100%; background-color: #50fa7b; border-radius: 5px; text-align: right; color: #1e1e1e; font-weight: bold; line-height: 20px; padding-right: 5px; }
+    </style>
 </head>
 <body>
 
 <div class="dashboard">
-    <h1>JEE Advanced Deadline: Dec 15, 2025 (50 Days Left)</h1>
+    <h1 style="color: #50fa7b; border-bottom: 2px solid #50fa7b; padding-bottom: 10px;">JEE Advanced Deadline: Dec 15, 2025 (50 Days Left)</h1>
     
     <h2>Overall Progress: <span id="progress-text">0%</span></h2>
     <div class="progress-bar-container">
@@ -17,21 +48,19 @@
     <table>
         <thead>
             <tr>
-                <th>Status</th>
+                <th>Done</th>
                 <th>Subject</th>
-                <th>Module Block</th>
-                <th>Lectures/PYQs</th>
-                <th>Target Date</th>
+                <th>Task Name</th>
+                <th>Time Est.</th>
+                <th>Notes</th>
             </tr>
         </thead>
         <tbody id="task-list">
             </tbody>
     </table>
     
-    <p class="commitment">Commitment: 4 Lectures + 2.5 Hrs PYQs Daily (M-S)</p>
+    <p class="commitment">Commitment: **4 Lectures + 2.5 Hrs PYQs Daily (M-S)**</p>
 </div>
-
-<script src="tracker_script.js"></script>
 
 </body>
 </html>
